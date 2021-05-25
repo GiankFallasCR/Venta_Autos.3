@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Edita Cliente</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./../resources/templates/plantilla.xhtml">
+            <ui:define name="content">
+                <h:form id="editaClienteForm">
+                    <b:container fluid="true">
+                        <b:panel title="Edita Cliente" look="primary" collapsible="false">
+                            
+                            <b:row tooltip="Modifique la identificacion unicamente para insertar un registro nuevo">
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Identificacion" for="CEDULA" />
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Identificacion" id="CEDULA" required="true"
+                                                 value="#{clienteController.CEDULA}"
+                                                 />
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="CEDULA"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="Nombre" />
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Nombre" id="NOMBRE" required="true"
+                                                 value="#{clienteController.NOMBRE}"
+                                                 />
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="nombre"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="Primer Apellido" />
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Primer Apellido" id="APELLIDO_1" required="true"
+                                                 value="#{clienteController.APELLIDO_1}"
+                                                 />
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="APELLIDO_1"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="Segundo Apellido" />
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Segundo Apellido" id="APELLIDO_2" required="true"
+                                                 value="#{clienteController.APELLIDO_2}"
+                                                 />
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="APELLIDO_2"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="Correo" />
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Correo" id="CORREO" required="true"
+                                                 value="#{clienteController.CORREO}"
+                                                 />
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="CORREO"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Telefono" for="TELEFONO"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Telefono"
+                                                 required="true"  
+                                                 mask="9999-9999"
+                                                 id="TELEFONO"
+                                                 value="#{clienteController.TELEFONO}"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="TELEFONO"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="Ubicacion" />
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Ubicacion" id="UBICACION" required="true"
+                                                 value="#{clienteController.UBICACION}"
+                                                 />
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="UBICACION"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2"/>
+                                <b:column medium-screen="4">
+                                    
+                                    <b:commandButton value="Modificar"
+                                                     look="success"
+                                                     style="width: 33%"
+                                                     action="#{clienteController.updateCliente()}"
+                                                     >
+
+                                    </b:commandButton>
+                                    <b:commandButton value="Eliminar"
+                                                     look="danger"
+                                                     action="#{clienteController.deleteCliente()}"
+                                                     style="width: 33%"
+                                                     >
+
+                                    </b:commandButton>
+                                </b:column>                                
+                            </b:row>
+                        </b:panel> 
+                    </b:container>
+                </h:form>   
+            </ui:define>
+        </ui:composition>
+
+    </h:body>
+</html>

@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 22, 2021, 10:34:43 PM
+    Author     : Frey
+*/
+body {
+    background-image: url("https://wallpaperaccess.com/full/1662265.jpg");
+    background-size: cover;
+}
+
+.panel {
+    background-image: url("https://i.pinimg.com/originals/95/ee/86/95ee8696f8ed1abb3767928c4d0daf65.jpg");
+    background-repeat: no-repeat;
+    background-size: 400px 550px;
+    transition: transform .2s;
+}
+
+.panel:hover {
+  transform: scale(1.02); 
+}
+
+.input-group {
+    left: 12%;
+    width: 300px;
+}
+
+.centrado {
+    position:absolute;
+    top:50% ;
+    left:50% ;
+    width:400px;
+    height: 550px;
+    margin: auto;
+    margin-left: -200px;
+    margin-top: -150px;
+}
+
+.bf-message {
+    width: 300px;
+    height: 30px;
+    margin-left: 35px;
+}
+
+.row {
+    padding-top: 12px;
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    width: 200px;
+    height: 35px;
+    margin: auto;
+    margin-left: -100px;
+    margin-top: 5px;
+}
+

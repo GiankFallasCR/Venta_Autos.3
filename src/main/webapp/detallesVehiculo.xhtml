@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:p="http://primefaces.org/ui">
+
+
+    <style>
+        .image:hover{
+            transform: scale(1.02); 
+        }
+    </style>
+    <body>
+
+        <ui:composition template="./resources/templates/plantillalogout.xhtml">
+
+            <ui:define name="content">
+                <h:form id="detallesForm">
+                    <b:container fluid="true">
+                        <b:panel title="Registro de Vehiculo" look="primary">
+                            <b:panel>
+                                <b:row>
+                                    <b:column medium-screen="2">
+                                        <h:outputLabel value="Foto" for="IMAGE"/>
+                                    </b:column>
+
+                                    <img
+                                        style="height: 250px;
+                                        align-items: center;
+                                        border-radius: 25px;" 
+                                        src="carros/#{vehiculoController.IMAGE}"/>
+
+                                </b:row>
+                            </b:panel>
+                            <br> </br>
+
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Marca" for="MARCA"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Marca"
+                                                 required="true"                                                 
+                                                 id="marca"
+                                                 value="#{vehiculoController.MARCA}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="marca"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Modelo" for="MODELO"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Modelo"
+                                                 required="true"                                                 
+                                                 id="modelo"
+                                                 value="#{vehiculoController.MODELO}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Placa" for="PLACA"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="1010201"
+                                                 required="true"
+                                                 mask="9999999"                                                 
+                                                 id="placa"
+                                                 value="#{vehiculoController.PLACA}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="apellido2"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Estilo" for="ESTILO"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Estilo"
+                                                 required="true"                                                 
+                                                 id="Estilo"
+                                                 value="#{vehiculoController.ESTILO}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="Estilo"/>
+                                </b:column>
+                            </b:row>
+
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Año" for="AÑO"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText required="true"                                                 
+                                                 id="year"
+                                                 value="#{vehiculoController.YEAR}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="fechaGraduacionColegio"/>
+                                </b:column>
+                            </b:row>
+
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Puertas" for="PUERTAS"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Estilo"
+                                                 required="true"                                                 
+                                                 id="estilo"
+                                                 value="#{vehiculoController.PUERTAS}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="Puertas"/>
+                                </b:column>
+                            </b:row>
+
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Condicion" for="CONDICION"/>
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Condicion"
+                                                 required="true"  
+                                                 id="Condicion"
+                                                 value="#{vehiculoController.DESC_CONDICION}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="celular"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Cilindraje" for="CILINDRAJE"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Cilindraje"
+                                                 required="true"                                                 
+                                                 id="cilindraje"
+                                                 value="#{vehiculoController.CILINDRAJE}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Traccion" for="TRACCION"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Traccion"
+                                                 required="true"                                                 
+                                                 id="traccion"
+                                                 value="#{vehiculoController.TRACCION}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Combustible" for="COMBUSTIBLE"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Combustible"
+                                                 required="true"                                                 
+                                                 id="combustible"
+                                                 value="#{vehiculoController.COMBUSTIBLE}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Kilometraje" for="KILOMETRAJE"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Kilometraje"
+                                                 required="true"                                                 
+                                                 id="Kilo"
+                                                 value="#{vehiculoController.KILOMETRAJE}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Color interior" for="COLOR_INT"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="C interior"
+                                                 required="true"                                                 
+                                                 id="CI"
+                                                 value="#{vehiculoController.COLOR_INTERIOR}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Color exterior" for="COLOR_EXT"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="C exterior"
+                                                 required="true"                                                 
+                                                 id="CE"
+                                                 value="#{vehiculoController.COLOR_EXTERIOR}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Descripcion Extras" for="EXTRAS"/>
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Extras"
+                                                 required="true"                                                 
+                                                 id="extras"
+                                                 value="#{vehiculoController.DESC_EXTRAS}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Precio" for="PRECIO"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Precio"
+                                                 required="true"                                                 
+                                                 id="precio"
+                                                 value="#{vehiculoController.PRECIO}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Negociable" for="NEGOCIABLE"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Negociable"
+                                                 required="true"                                                 
+                                                 id="negociable"
+                                                 value="#{vehiculoController.NEGOCIABLE}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="Traspaso" for="TRASPASO"/>
+                                </b:column>
+                                <b:column medium-screen="2">
+                                    <b:inputText placeholder="Traspaso"
+                                                 required="true"                                                 
+                                                 id="traspaso"
+                                                 value="#{vehiculoController.TRASPASO}"
+                                                 readonly="true"/>
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="modelo"/>
+                                </b:column>
+                            </b:row>
+
+                        </b:panel>
+                    </b:container>
+                </h:form>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
